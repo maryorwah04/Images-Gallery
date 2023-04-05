@@ -1,5 +1,6 @@
 :root {
     --default-font: 'Open sans', sans serif;
+    --animation-time: 4s;
 }
 
 * {
@@ -15,7 +16,7 @@ body {
 
 .body {
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(65, 55, 55, 0.4), rgba(0, 0, 0, 0.4)),
+    background-image: linear-gradient(to bottom, rgba(65, 55, 55, 0.4), rgba(83, 75, 75, 0.4)),
     url("C:/Users/USER/Desktop/myprojects/Animations/assets/images/pexels-photo-355770.jpeg");
     display: flex;
     justify-content: center;
@@ -26,7 +27,7 @@ body {
     height: 100%;
     width: 50%;
     background: transparent;
-    animation: box-shadow 4s ease-in-out infinite;
+    animation: box-shadow var(--animation-time) ease-in-out infinite;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -37,7 +38,7 @@ body {
         box-shadow: inset 0 0 50px white;
     }
     to {
-        box-shadow: inset 0 0 50px blue;
+        box-shadow: inset 0 0 100px blue;
     }
 }
 
@@ -56,7 +57,7 @@ body {
 }
 
 .scroll-text {
-    animation: scroll 4s ease-in-out, spacing 4s ease-in-out 4s infinite;
+    animation: scroll var(--animation-time) ease-in-out, spacing var(--animation-time) ease-in-out var(--animation-time) infinite;
 }
 
 @keyframes scroll {
@@ -94,4 +95,21 @@ body {
 img {
     width: 100px;
     height: 100px;
+    animation: scale var(--animation-time) ease-in-out;
+    transition: transform 1s ease-in-out;
+    transform-origin: center center;
+}
+
+img:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1.2);
+    }
 }
