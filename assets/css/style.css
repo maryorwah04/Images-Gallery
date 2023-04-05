@@ -14,5 +14,16 @@ body {
 
 .body {
     height: 100%;
-    background: #000;
+    background-image: linear-gradient(to bottom, rgba(65, 55, 55, 0.4), rgba(0, 0, 0, 0.4)),
+    url("C:/Users/USER/Desktop/myprojects/Animations/assets/images/pexels-photo-355770.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_body {
+    height: 100%;
+    width: 50%;
+    background: transparent;
+    box-shadow: 0 0 30px white;
 }
